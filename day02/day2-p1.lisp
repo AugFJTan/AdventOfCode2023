@@ -30,13 +30,13 @@
 (defun verify-sets (sets)
     (loop for set in sets
     append (list
-        (loop for subset in set
-            collect (if (equal (cadr subset) "red")
-                        (if (<= (car subset) 12) 1 0)
-                    (if (equal (cadr subset) "green")
-                        (if (<= (car subset) 13) 1 0)
-                    (if (equal (cadr subset) "blue")
-                        (if (<= (car subset) 14) 1 0))))
+        (loop for ball in set
+            collect (if (equal (cadr ball) "red")
+                        (if (<= (car ball) 12) 1 0)
+                    (if (equal (cadr ball) "green")
+                        (if (<= (car ball) 13) 1 0)
+                    (if (equal (cadr ball) "blue")
+                        (if (<= (car ball) 14) 1 0))))
         ))))
 
 
